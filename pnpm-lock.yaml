@@ -1,0 +1,58 @@
+lockfileVersion: 5.4
+
+importers:
+
+  tools/compass-ical:
+    specifiers:
+      ical-generator: ^3.4.3
+      moment: ^2.29.3
+    dependencies:
+      ical-generator: 3.4.3_moment@2.29.3
+      moment: 2.29.3
+
+packages:
+
+  /ical-generator/3.4.3_moment@2.29.3:
+    resolution: {integrity: sha512-9NkhRZ1cnfgIeXfv9iPPXIqBLYlKBUq8iteSDQxf1qEzhrmWgwb4jitTDGKOLvCoHB/pPmmtBTVHQw1WgCK3dg==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@touch4it/ical-timezones': '>=1.6.0'
+      '@types/luxon': '>= 1.26.0'
+      '@types/mocha': '>= 8.2.1'
+      '@types/node': '>= 15.0.0'
+      dayjs: '>= 1.10.0'
+      luxon: '>= 1.26.0'
+      moment: '>= 2.29.0'
+      moment-timezone: '>= 0.5.33'
+      rrule: '>= 2.6.8'
+    peerDependenciesMeta:
+      '@touch4it/ical-timezones':
+        optional: true
+      '@types/luxon':
+        optional: true
+      '@types/mocha':
+        optional: true
+      '@types/node':
+        optional: true
+      dayjs:
+        optional: true
+      luxon:
+        optional: true
+      moment:
+        optional: true
+      moment-timezone:
+        optional: true
+      rrule:
+        optional: true
+    dependencies:
+      moment: 2.29.3
+      uuid-random: 1.3.2
+    dev: false
+
+  /moment/2.29.3:
+    resolution: {integrity: sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==}
+    dev: false
+
+  /uuid-random/1.3.2:
+    resolution: {integrity: sha512-UOzej0Le/UgkbWEO8flm+0y+G+ljUon1QWTEZOq1rnMAsxo2+SckbiZdKzAHHlVh6gJqI1TjC/xwgR50MuCrBQ==}
+    dev: false
