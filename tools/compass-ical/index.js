@@ -1,5 +1,6 @@
-const moment = require("moment");
+const moment = require("moment-timezone");
 const { ICalCalendar } = require("ical-generator");
+const { getVtimezoneComponent } = require("@touch4it/ical-timezones");
 
 const time = new Date();
 
@@ -19,9 +20,13 @@ const events = [
 ];
 
 const calendar = new ICalCalendar();
+calendar.timezone({
+  name: "America/Los_Angeles",
+  generator: getVtimezoneComponent,
+});
 
 events.forEach((e) => {
-  const d = moment(e.date, "ddd, MMM Do");
+  const d = moment.tz(e.date, "ddd, MMM Do", "America/Toronto");
   const start = moment(d).startOf("day").add(8, "hours");
   const end = moment(start).add(10, "hours");
   console.log(d, start, end);
